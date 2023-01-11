@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+	box-sizing: border-box;
+	font-family: Inter;
+}
+body {
+	background-color: #282D35;
+	margin: 0;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	background-color: #27272c;
+	height: 90px;
+	padding: 50px 25px;
+	color: white;
+}
+
+nav > img {
+	width: 80px;
+}
+
+nav > h3, nav > h4 {
+	margin: 0;
+}
+
+nav > h3 {
+	margin-right: auto;
+}
+
+main {
+	padding: 55px 25px;
+	color: white;
+	background-image: url("./images/react.png");
+	background-repeat: no-repeat;
+	background-position-x: 112%;
+	background-position-y: 50%;
+}
+
+main > h1 {
+	margin: 0;
+	font-size: 40px;
+	letter-spacing: -0.05em;
+}
+
+main > ul {
+	margin-top: 1rem;
+	max-width: 500px;
+}
+
+main > ul > li {
+	line-height: 30px;
+}
+
+main > ul > li::marker {
+	color: aqua;
+	font-size: 1.4rem;
+}

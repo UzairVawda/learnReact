@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	padding: 0
+}
+
+.navBar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 5px 2px -2px rgba(0,0,0,.2);
+	padding: 0.5rem;
+}
+
+.navImg {
+	width: 100px;
+}
+
+.nav-items {
+	list-style: none;
+	display: flex;
+	margin-bottom: 0;
+}
+
+.nav-items > li {
+	padding: 10px;
+	margin: 0 .5rem;
+	border: 1px solid black;
+	border-radius: 3px;
+}
+
+.card {
+	margin: 1rem auto;
+	width: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+	padding: 2rem;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+  background-color: rgb(232, 196, 251);
+  color: white;
+  text-align: center;
+	padding: 1rem 0;
+}

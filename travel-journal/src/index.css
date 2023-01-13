@@ -1,13 +1,49 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: Poppins;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  background-color: rgb(210, 141, 57);
+  color: white;
+  font-size: 2rem;
+  box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+}
+nav > i {
+  margin-right: 10px;
+}
+
+nav > h1 {
+  margin: 0 0 10px 0;
+}
+
+.travelList {
+  display: flex;
+  flex-direction: column;
+}
+
+.destination {
+  display: flex;
+  width: 750px;
+  margin: auto;
+  padding: 20px;
+}
+
+.destination--info {
+  padding: 0 20px;
+}
+
+.destination--img {
+  width: 250px;
+
 }

@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-export default function TodoForm(props) {
+export default function TodoForm({ addTodoItem, editData }) {
   const [todoItem, setTodoItem] = useState("");
+  const [isEditMode, setIsEditMode] = useState(false);
 
   function handleChange(e) {
     const { value } = e.target;
@@ -10,12 +11,20 @@ export default function TodoForm(props) {
   function handleSubmit(e) {
     e.preventDefault();
     const updatedTodo = {
-      id: Math.floor(Math.random() * 10000),
+      id: isEditMode ? editData.id : Math.floor(Math.random() * 10000),
       text: todoItem,
     };
-    props.addTodoItem(updatedTodo);
+    addTodoItem(updatedTodo);
     setTodoItem("");
+    setIsEditMode(false);
   }
+
+  useEffect(() => {
+    if (editData && Object.keys(editData).length !== 0) {
+      setTodoItem(editData.text);
+      setIsEditMode(true);
+    }
+  }, [editData]);
 
   return (
     <form onSubmit={handleSubmit} className="todo-form">
@@ -28,7 +37,7 @@ export default function TodoForm(props) {
         onChange={handleChange}
       />
       <button type="submit" className="todo-button">
-        Add ToDo Item
+        {isEditMode ? "Update ToDo Item" : "Add ToDo Item"}
       </button>
     </form>
   );

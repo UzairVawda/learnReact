@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Post from "./Post";
+import Post from ".components/Post";
 
 export default function App({ initialCount }) {
   // const [count, setCount] = useState(initialCount);

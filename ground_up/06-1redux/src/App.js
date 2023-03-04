@@ -18,7 +18,7 @@ function App() {
   }, [dispatch, cartItems]);
 
   useEffect(() => {
-    dispatch(getCartItems());
+    dispatch(getCartItems("Uzair Vawda"));
   }, [dispatch]);
 
   if (isLoading) {
